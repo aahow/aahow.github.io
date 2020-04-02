@@ -5,7 +5,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>the portfolio</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 <link href="multiColumnTemplate.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -34,39 +33,40 @@
       <h3>the portfolio !</h3>
 		  <p>i have a <a href="https://github.com/aahow">github</a> you can look at</p>
       <h3>photography</h3>
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+         <!-- Slideshow container -->
+        <div class="slideshow-container">
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          <div class="item active">
-            <img src="brokencity.jpg" alt="weird wood picture">
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="brokencity.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
           </div>
 
-          <div class="item">
-            <img src="close.jpg" alt="close up i guess">
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="board.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
           </div>
 
-          <div class="item">
-            <img src="glam.jpg" alt="this be glamourous">
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="glam.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
           </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+        <br>
 
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div> 
 
     </article>
 
@@ -75,8 +75,22 @@
     <div class="copyright">&copy;2020 <p>this is the bottom of the website, nothing is down here</p></div>
   </footer>
 </div>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+} 
+</script>
+
 </body>
 </html>
