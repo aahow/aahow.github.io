@@ -2,7 +2,7 @@
 
 
 div.a {
-width: 50px;
+width: 100px;
 height:25px;
  background-color:red;
 position:fixed;
@@ -10,7 +10,7 @@ position:fixed;
 }
 
 div.b {
-width: 50px;
+width: 45px;
 height:25px;
  background-color:green;
 position:fixed;
@@ -20,7 +20,7 @@ position:fixed;
 div.c {
 width: 75px;
 height:25px;
- background-color:blue;
+ background-color:#86eb34;
 position:fixed;
     
 }
@@ -42,7 +42,7 @@ position:fixed;
 }
 
 div.f {
-width: 100px;
+width: 115px;
 height:25px;
  background-color: grey;
 position:fixed;
@@ -51,7 +51,7 @@ position:fixed;
 div.g {
 width: 50px;
 height:25px;
- background-color: red;
+ background-color: #34ebc9;
 position:fixed;
     
 }
