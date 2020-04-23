@@ -8,32 +8,21 @@
 <link href="experimental.css" rel="stylesheet" type="text/css">
 <script type="text/javascript">
 
-function RandomObjectMover(obj, container) {
-$(document).ready(function(){
-    animateDiv();
-    
-});
+function moveDiv() {
+    var $span = $("#random");
 
-function makeNewPosition(){
-    
-    // Get viewport dimensions (remove the dimension of the div)
-    var h = $(window).height() - 50;
-    var w = $(window).width() - 50;
-    
-    var nh = Math.floor(Math.random() * h);
-    var nw = Math.floor(Math.random() * w);
-    
-    return [nh,nw];    
-    
-}
+    $span.fadeOut(1000, function() {
+        var maxLeft = $(window).width() - $span.width();
+        var maxTop = $(window).height() - $span.height();
+        var leftPos = Math.floor(Math.random() * (maxLeft + 1))
+        var topPos = Math.floor(Math.random() * (maxTop + 1))
 
-function animateDiv(){
-    var newq = makeNewPosition();
-    $('.a').animate({ top: newq[0], left: newq[1] }, function(){
-      animateDiv();        
+        $span.css({ left: leftPos, top: topPos }).fadeIn(1000);
     });
-    
 };
+
+moveDiv();
+setInterval(moveDiv, 5000);
 </script>
 </head>	
 
