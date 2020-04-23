@@ -3,6 +3,7 @@ $(document).ready(function(){
     animateDiv('.b');
     animateDiv('.c');
     animateDiv('.d');
+    animateDiv('.e');
 });
 
 function makeNewPosition(){
