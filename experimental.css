@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+body {
+	background-image: url(LORAXXXX.png);
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
 
 div.a {
 width: 50px;
